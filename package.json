@@ -1,0 +1,22 @@
+{
+  "name": "react-color-plate",
+  "version": "1.0.0",
+  "description": "A color picker tool for react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qq799155469"
+  },
+  "keywords": [
+    "react",
+    "color"
+  ],
+  "author": "siko",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.2"
+  }
+}
