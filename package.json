@@ -8,13 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qq799155469"
+    "url": "https://github.com/qq799155469/react-color-plate"
   },
   "keywords": [
     "react",
     "color"
   ],
-  "author": "siko",
+  "author": "qq799155469",
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.2"
