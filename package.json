@@ -15,7 +15,7 @@
     "color"
   ],
   "author": "siko",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "react": "^16.4.2"
   }
