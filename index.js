@@ -115,8 +115,24 @@ export default class ColorPicker extends Component {
     )
     return (
       <div>
+        {/* <Popover
+        title={this.props.title || this.state.defaultTitle}
+        content={ColorPickerContent}
+        trigger='click'
+        placement="bottom"
+        visible={this.state.visible}
+        onVisibleChange={this.handleVisibleChange}>
+          <span style={{
+            width: 16,
+            height: 16,
+            display: 'inline-block',
+            backgroundColor: this.state.color,
+            boxShadow: 'inset 0.5px 0.5px 3px #444',
+            borderRadius: '50%',
+            cursor: 'pointer'
+          }}/>
+        </Popover> */}
         <ColorPanel
-        className='color-picker-container'
         title={this.props.title || this.state.defaultTitle}
         content={ColorPickerContent}
         trigger='click'
@@ -142,6 +158,13 @@ export default class ColorPicker extends Component {
 }
 
 class ColorPanel extends Component {
+  static propTypes = {
+    onVisibleChange: PropTypes.any,
+    children: PropTypes.any,
+    visible: PropTypes.bool,
+    title: PropTypes.string,
+    content: PropTypes.any
+  }
   constructor(props) {
     super(props)
     this.state = {
@@ -188,8 +211,7 @@ class ColorPanel extends Component {
           }
         )}
         {this.props.visible && <div 
-        ref='container' 
-        // className='color-picker-container'
+        className='color-picker-container'
         style={{
           position: 'relative',
           zIndex: 100,
@@ -211,8 +233,6 @@ class ColorPanel extends Component {
           <div 
           style={{
             position: "absolute",
-            left: this.props.left,
-            top: this.props.top,
             left: '-50%',
             top: 6,
             minWidth: 210,
