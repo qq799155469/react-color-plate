@@ -23,7 +23,7 @@ class demo extends Component {
        <ColorPicker 
        title='选择颜色'
        defaultColor='red'
-       callback={this.changeColor}
+       callback={color => this.changeColor(color)}
        />
     )
   }
